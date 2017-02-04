@@ -1,7 +1,5 @@
-# UIDevice-SpecificModel
-A Swift extension for UIDevice that will enable you to retrieve the specific model name (like "iPhone 5")
-
-## Use UIDevice+SpecificModel to:
+# UIDevice+SpecificModel
+A Swift extension for UIDevice that will enable you to:
 
 Check for a specific device:
 ```swift
@@ -22,4 +20,4 @@ print(UIDevice.current.specificModelIdentifier)
 print(UIDevice.current.specificModel.identifier)
 ```
 
-Note that if the specific model can't be determined - most likely because Apple released a new model not included here - specificModel.name will instead return the device identifier.
+Note that if the specific model can't be determined - most likely because Apple released a new model not included here - `specificModel.name` will instead return the device identifier.
