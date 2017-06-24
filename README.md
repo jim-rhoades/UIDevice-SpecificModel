@@ -20,4 +20,6 @@ print(UIDevice.current.specificModelIdentifier)
 print(UIDevice.current.specificModel.identifier)
 ```
 
-Note that if the specific model can't be determined - most likely because Apple released a new model not yet handled by the code - `specificModel.name` will instead return the device identifier.
+If the specific model can't be determined - most likely because Apple released a new model not yet handled by the code - `specificModel.name` will instead return the device identifier.
+
+(Note to self: identifiers for new devices can usually be found on [the iPhone wiki](http://theiphonewiki.com/wiki/Models) or [EveryMac.com](http://www.everymac.com).)

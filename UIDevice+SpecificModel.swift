@@ -42,6 +42,7 @@ public enum SpecificModel {
 	case iPad2
 	case iPad3
 	case iPad4
+	case iPad5
 	case iPadAir
 	case iPadAir2
 	case iPadMini
@@ -50,6 +51,8 @@ public enum SpecificModel {
 	case iPadMini4
 	case iPadPro9_7
 	case iPadPro12_9
+	case iPadPro10_5
+	case iPadPro12_9_gen2
 	case appleTV
 	case simulator
 	case other
@@ -94,6 +97,8 @@ public enum SpecificModel {
 			return "iPad 3"
 		case .iPad4:
 			return "iPad 4"
+		case .iPad5:
+			return "iPad 5"
 		case .iPadAir:
 			return "iPad Air"
 		case .iPadAir2:
@@ -107,9 +112,13 @@ public enum SpecificModel {
 		case .iPadMini4:
 			return "iPad Mini 4"
 		case .iPadPro9_7:
-			return "iPad Pro (9.7 inch)"
+			return "iPad Pro (9.7\")"
 		case .iPadPro12_9:
-			return "iPad Pro (12.9 inch)"
+			return "iPad Pro (12.9\")"
+		case .iPadPro10_5:
+			return "iPad Pro (10.5\")"
+		case .iPadPro12_9_gen2:
+			return "iPad Pro (12.9\", 2nd gen.)"
 		case .appleTV:
 			return "Apple TV"
 		case .simulator:
@@ -159,6 +168,8 @@ public extension UIDevice {
 			return .iPad3
 		case "iPad3,4", "iPad3,5", "iPad3,6":
 			return .iPad4
+		case "iPad6,11", "iPad6,12":
+			return .iPad5
 		case "iPad4,1", "iPad4,2", "iPad4,3":
 			return .iPadAir
 		case "iPad5,3", "iPad5,4":
@@ -175,6 +186,10 @@ public extension UIDevice {
 			return .iPadPro9_7
 		case "iPad6,7", "iPad6,8":
 			return .iPadPro12_9
+		case "iPad7,3", "iPad7,4":
+			return .iPadPro10_5
+		case "iPad7,1", "iPad7.2":
+			return .iPadPro12_9_gen2
 		case "AppleTV5,3":
 			return .appleTV
 		case "i386", "x86_64":
