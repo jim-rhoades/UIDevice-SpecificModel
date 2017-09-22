@@ -36,9 +36,12 @@ public enum SpecificModel {
 	case iPhone6Plus
 	case iPhone6s
 	case iPhone6sPlus
+	case iPhoneSE
 	case iPhone7
 	case iPhone7Plus
-	case iPhoneSE
+	case iPhone8
+	case iPhone8Plus
+	case iPhoneX
 	case iPad2
 	case iPad3
 	case iPad4
@@ -54,6 +57,7 @@ public enum SpecificModel {
 	case iPadPro10_5
 	case iPadPro12_9_gen2
 	case appleTV
+	case appleTV4K
 	case simulator
 	case other
 	
@@ -85,12 +89,18 @@ public enum SpecificModel {
 			return "iPhone 6s"
 		case .iPhone6sPlus:
 			return "iPhone 6s Plus"
+		case .iPhoneSE:
+			return "iPhone SE"
 		case .iPhone7:
 			return "iPhone 7"
 		case .iPhone7Plus:
 			return "iPhone 7 Plus"
-		case .iPhoneSE:
-			return "iPhone SE"
+		case .iPhone8:
+			return "iPhone 8"
+		case .iPhone8Plus:
+			return "iPhone 8 Plus"
+		case .iPhoneX:
+			return "iPhone X"
 		case .iPad2:
 			return "iPad 2"
 		case .iPad3:
@@ -121,6 +131,8 @@ public enum SpecificModel {
 			return "iPad Pro (12.9\", 2nd gen.)"
 		case .appleTV:
 			return "Apple TV"
+		case .appleTV4K:
+			return "Apple TV 4K"
 		case .simulator:
 			return "Simulator"
 		case .other:
@@ -156,12 +168,18 @@ public extension UIDevice {
 			return .iPhone6s
 		case "iPhone8,2":
 			return .iPhone6sPlus
+		case "iPhone8,4":
+			return .iPhoneSE
 		case "iPhone9,1", "iPhone9,3":
 			return .iPhone7
 		case "iPhone9,2", "iPhone9,4":
 			return .iPhone7Plus
-		case "iPhone8,4":
-			return .iPhoneSE
+		case "iPhone10,1", "iPhone10,4":
+			return .iPhone8
+		case "iPhone10,2", "iPhone10,5":
+			return .iPhone8Plus
+		case "iPhone10,3", "iPhone10,6":
+			return .iPhoneX
 		case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":
 			return .iPad2
 		case "iPad3,1", "iPad3,2", "iPad3,3":
@@ -192,6 +210,8 @@ public extension UIDevice {
 			return .iPadPro12_9_gen2
 		case "AppleTV5,3":
 			return .appleTV
+		case "AppleTV6,2":
+			return .appleTV4K
 		case "i386", "x86_64":
 			return .simulator
 		default:
